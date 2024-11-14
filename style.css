@@ -7,11 +7,12 @@
   --main_menu_height_shrink: 1vh;
 
 
-  --transition_time: 0.75s;
+  --transition_time: .6s;
 }
 
 
 body {
+  padding-top: 10px;
   max-width: 100%;
   overflow-x: hidden;
   margin: 0;
@@ -21,6 +22,8 @@ body {
 }
 
 .main_menu {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   background-color: green;
   min-height: var(--main_menu_height_min);
   height: var(--main_menu_height);  
@@ -32,6 +35,9 @@ body {
   z-index: 1000; 
   filter: blur(0px);
   opacity: 1;
+
+  display: flex;
+  justify-content: center;
 }
 
 .main_menu.shrink {
@@ -43,6 +49,18 @@ body {
   transition: var(--transition_time)
   
 
+}
+
+.main_menu *{
+  opacity: 1;
+  transition: opacity var(--transition_time)
+  
+}
+
+.main_menu.shrink *{
+  opacity: 0;
+  transition: opacity var(--transition_time)
+  
 }
 
 
@@ -58,14 +76,16 @@ body {
 
 
 .bar {
+  display: flex;
   background-color: yellow;
   width: 100%;
+  gap: calc(var(--main_menu_height)/3);
 
 }
 
 .panel{
   overflow: hidden;
-  width: 100%;
+  width: 98%;
   height: 100%;
   background-color: blue;
   display: flex;
@@ -76,4 +96,16 @@ body {
   min-height: var(--main_menu_height_min);
   height: var(--main_menu_height);  
   transition: var(--transition_time)
+}
+
+.button{
+
+  background-color: pink;
+  width: var(--main_menu_height);
+  min-width: var(--main_menu_height_min);
+}
+
+.right_bar {
+
+  justify-content: right;
 }
