@@ -1,0 +1,55 @@
+:root {
+
+
+  --scrolbar_html: 0px;
+  --main_menu_height: 5vh;
+  --main_menu_height_min: 22px;
+  --main_menu_height_shrink: 1vh;
+
+
+  --transition_time: 0.5s;
+}
+
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  height: 5000px;  
+}
+
+.main_menu {
+  background-color: green;
+  min-height: var(--main_menu_height_min);
+  height: var(--main_menu_height);  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: var(--transition_time);  
+  z-index: 1000; 
+  filter: blur(0px);
+  opacity: 1;
+}
+
+.main_menu.shrink {
+  background-color: black;
+  opacity: 0.5;
+  filter: blur(1px);
+  min-height: 5px;
+  height: var(--main_menu_height_shrink);  
+
+}
+
+
+
+.content {
+  
+  
+  overflow: hidden;
+  max-width: 100%;
+  margin:3%;
+  padding-top:calc(var(--main_menu_height) + var(--main_menu_height_min));
+}
