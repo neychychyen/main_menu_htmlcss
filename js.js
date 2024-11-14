@@ -43,6 +43,9 @@ window.addEventListener('scroll', function() {
     }, get_transtion());
       
     }
-
+    if (NewScroll < 10){
+      mainMenu.classList.add('transition');
+      mainMenu.classList.remove('shrink');
+    }
     CurrentScroll = NewScroll
   });
