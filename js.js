@@ -11,6 +11,16 @@ function return_scroll(scrollPosition) {
       
 }
 
+function removeLastChar(str) {
+  return str.slice(0, -1);
+}
+
+function get_transtion(){
+  let result = getComputedStyle(document.documentElement).getPropertyValue('--transition_time');
+  result = removeLastChar(result);
+  return parseFloat(result)*1000;
+}
+
 
 
 window.addEventListener('scroll', function() {
@@ -24,8 +34,14 @@ window.addEventListener('scroll', function() {
     // Если прокручено больше чем 100px (можно настроить значение)
     if (NewScroll - CurrentScroll > 0) {
       mainMenu.classList.add('shrink');
+      
     } else {
+      mainMenu.classList.add('transition');
       mainMenu.classList.remove('shrink');
+      setTimeout(() => {
+      mainMenu.classList.remove('transition');
+    }, get_transtion());
+      
     }
 
     CurrentScroll = NewScroll
