@@ -111,7 +111,6 @@ function return_scroll(scrollPosition) {
 
 window.addEventListener('scroll', function(){
 
-        console.log(document.querySelector('body'))
         event_scroll();
         return_scroll(CurrentScroll);
 
@@ -119,7 +118,6 @@ window.addEventListener('scroll', function(){
 
 
 window.addEventListener('resize', function(){
-  document.querySelector('.content').click();
         handleResize();
         return_resize();
         
