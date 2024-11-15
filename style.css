@@ -41,6 +41,8 @@ body {
 }
 
 .main_menu.shrink {
+  padding-top: 0vh;
+  padding-bottom: 0vh;
   background-color: black;
   opacity: 0.5;
   filter: blur(1px);
@@ -108,4 +110,15 @@ body {
 .right_bar {
 
   justify-content: right;
+}
+
+
+.coub{
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+.flexable{
+  display: grid;
 }
