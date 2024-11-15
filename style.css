@@ -8,6 +8,10 @@
 
 
   --transition_time: .6s;
+  --real_transition: .3s;
+
+
+  --menu_height:calc(15px + 3vh);
 }
 
 
@@ -101,7 +105,10 @@ body {
 }
 
 .button{
-
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   background-color: pink;
   width: var(--main_menu_height);
   min-width: var(--main_menu_height_min);
@@ -121,4 +128,83 @@ body {
 
 .flexable{
   display: grid;
+}
+
+
+
+
+
+/* Унаследованно*/
+.Menu_button{
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: center;
+    transition: var(--real_transition);/* ---------------------------------------------------------------ПЕРЕМЕННАЯ 1*/
+    width: 100%;
+
+}
+
+.button:hover div div{
+  background: red;
+  transition: var(--real_transition);
+
+}
+
+
+.button:hover .Menu_button{
+  transform: scale(1.08);
+  transition: var(--real_transition);
+}
+
+
+.button div{
+  transform: scale(1);
+  transition: var(--real_transition);
+}
+
+
+.button div div{
+  transition: var(--real_transition);
+
+}
+
+.line{
+  width: 60%;
+  height: 12%;
+  background: black;
+}
+
+
+
+
+/*Ротация*/
+
+.deg45{
+  transform-origin: left top;
+  rotate: 45deg;
+}
+
+.deg_m_45{
+  transform-origin: left bottom;
+  rotate: -45deg;
+}
+
+
+.u_deg45{
+  rotate:0deg;
+}
+
+
+.active_button{
+  height: 100%;
+  transform: translateX(12%) scale(1) !important;
+}
+
+.unactive_button{
+  height: 60%;
+  transform: translateX(0);
+  
 }
