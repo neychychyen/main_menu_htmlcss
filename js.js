@@ -135,13 +135,17 @@ function menu_onckick(event){
 function assemble_event_activity(first_elem, second_elem, father){
 
   if (first_elem.classList.contains('active')) {
+
     first_elem.classList.remove('active');
     first_elem.classList.add('u_deg45');
     second_elem.classList.add('u_deg45');
     first_elem.classList.remove('deg45');
+    
     second_elem.classList.remove('deg_m_45');
     father.classList.remove('active_button')
     father.classList.add('unactive_button')
+    
+    SideBar(true)
     
       
       
@@ -156,6 +160,26 @@ function assemble_event_activity(first_elem, second_elem, father){
     father.classList.add('active_button')
     father.classList.remove('unactive_button')
 
+    SideBar()
+
+
 }
+
+}
+
+
+function SideBar(del=false){
+  sidebar = document.querySelector('.sidebar')
+  main_menu = document.querySelector('.main_menu')
+
+  if (del){
+    main_menu.classList.remove('heightx2');
+    sidebar.classList.add('hidden');
+  }
+
+  else {
+    main_menu.classList.add('heightx2');
+    sidebar.classList.remove('hidden');
+  }
 
 }
