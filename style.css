@@ -189,11 +189,11 @@ body {
 }
 
 #line_1{
-  top:25%;
+  top:24.5%;
 }
 
 #line_2{
-  bottom:25%;
+  bottom:24.5%;
 }
 
 
@@ -293,11 +293,12 @@ body {
   list-style: none;
   max-height: 0;
   overflow: hidden;
-  transition: var(--transition_time);
+  
     }
 
 .sidebar-item.has-submenu:hover .submenu {
     max-height: 100vh;
+    transition: var(--transition_time);
     }
 
 .fixed{
@@ -334,6 +335,7 @@ p{
 .hoverable{
   transition: color var(--transition_time);
 }
+
 
 .hoverable:hover{
   color:red;
