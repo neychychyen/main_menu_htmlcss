@@ -296,10 +296,17 @@ body {
   
     }
 
+
+
 .sidebar-item.has-submenu:hover .submenu {
     max-height: 100vh;
     transition: var(--transition_time);
     }
+
+
+
+
+
 
 .fixed{
   position: fixed;
