@@ -91,6 +91,26 @@ function handleResize(){
 }
 
 
+function unactive_menu(queryS = '.panel_mm.searchbar'){
+  elem = document.querySelector(queryS)
+  elem.classList.add('flexable_height')
+  elem.classList.add('hidden')
+
+  setTimeout(() => {
+      elem.classList.remove('flexable_height');
+    }, get_transtion());
+}
+
+function active_menu(queryS = '.panel_mm.searchbar'){
+  elem = document.querySelector(queryS)
+  elem.classList.add('flexable_height')
+  elem.classList.remove('hidden')
+
+  setTimeout(() => {
+      elem.classList.remove('flexable_height');
+    }, get_transtion());
+}
+
 // Используются в фронтенде
 
 function return_resize() {
@@ -128,9 +148,20 @@ window.addEventListener('resize', function(){
 
 // onclick фунции
 
-function menu_onckick(event){
+function menu_onclick(event){
+
+  unactive_menu()
+
+  var sidebar = document.querySelector('.panel_mm.sidebar')
+  if (sidebar.classList.contains('hidden')){active_menu('.panel_mm.sidebar')}
+  else {unactive_menu('.panel_mm.sidebar')}
+
+
+
   
-  var nestedDiv = event.querySelector('div');
+  
+  
+  /*var nestedDiv = event.querySelector('div');
   var nestedDivClass = nestedDiv.querySelector('div'); // Получение класса вложенного div
 
   ClassList = nestedDivClass.classList
@@ -138,7 +169,7 @@ function menu_onckick(event){
 
   elements = document.querySelectorAll('.' + ClassList[0])
   
-  assemble_event_activity(elements[0], elements[1], nestedDiv) // Вывод класса вложенного div в консоль или выполнение других операций
+  assemble_event_activity(elements[0], elements[1], nestedDiv) // Вывод класса вложенного div в консоль или выполнение других операций*/
 
 }
 function assemble_event_activity(first_elem, second_elem, father){
@@ -192,3 +223,8 @@ function SideBar(del=false){
   }
 
 }
+
+
+
+
+
