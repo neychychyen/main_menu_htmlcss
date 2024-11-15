@@ -26,7 +26,7 @@
     <div class="menu">
 
       <div class="left_bar bar">
-        <div class="button hoverable" onclick="menu_onckick(this)">
+        <div class="button hoverable" id='mm' onclick="menu_onckick(this)">
           <div class="Menu_button">
             <div class="line" id="line_1"></div>
             <div class="line" id="line_2"></div>
@@ -67,7 +67,7 @@
                   <div class="div_button h1w1 hoverable"><button class="h1w1">Продукты</button></div>
                   <div class="fixed">
                     <div class="submenu">
-                      <div class="submenu_elem no-break hoverable"><button class="h1w1" onclick="alert(this)">Продукт 2214214</button></div>
+                      <div class="submenu_elem no-break hoverable"><button class="h1w1" onclick="alert(this.innerHTML)">Продукт 2214214</button></div>
                       <div class="submenu_elem no-break hoverable"><button class="h1w1">Продукт 2214214</button></div>
                       <div class="submenu_elem no-break hoverable"><button class="h1w1">Продукт 2214214</button></div>
                     </div>
@@ -114,7 +114,7 @@
 
 </div>
 
-<div class="content" onclick="">
+<div class="content" onclick="default__('#line_1', '#mm')">
   <p>gsadffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffфывыф</p>
 <p id="scroly">0</p>
 <p id="scale">0</p>
