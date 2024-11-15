@@ -296,10 +296,23 @@ body {
   
     }
 
-.sidebar-item.has-submenu:hover .submenu {
+
+
+@media (min-width: 768px) {
+  .sidebar-item.has-submenu:hover .submenu {
     max-height: 100vh;
     transition: var(--transition_time);
     }
+}
+
+@media (max-width: 768px) {
+  .sidebar-item.has-submenu:active .submenu {
+    max-height: 100vh;
+    transition: var(--transition_time);
+    }
+}
+
+
 
 .fixed{
   position: fixed;

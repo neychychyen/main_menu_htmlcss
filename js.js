@@ -10,7 +10,6 @@ return_scroll(getCurrentScroll())
 
 // ФУНКЦИИ
 
-
 function getCurrentScroll() { // Узнать текущий скролл по Y
         return window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
       }
@@ -103,7 +102,10 @@ function return_scroll(scrollPosition) {
 
 
 window.addEventListener('scroll', function(){
+        document.querySelector('body').click();
+        console.log(document.querySelector('body'))
         event_scroll();
+        
         return_scroll(CurrentScroll);
 
 } );
@@ -112,6 +114,7 @@ window.addEventListener('scroll', function(){
 window.addEventListener('resize', function(){
         handleResize();
         return_resize();
+        document.querySelector('body').click();
 
 } );
 
