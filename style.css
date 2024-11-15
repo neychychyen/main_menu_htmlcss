@@ -156,11 +156,19 @@ body {
     width: 100%;
 
 }
-
+@media (hover:hover){
 .button:hover div div{
   background: red;
   transition: var(--real_transition);
 
+}
+}
+
+@media (hover:none){
+.button:active div div{
+  transition: var(--real_transition);
+
+}
 }
 
 
@@ -298,12 +306,15 @@ body {
 
 
 
+
+
+
+
+
 .sidebar-item.has-submenu:hover .submenu {
     max-height: 100vh;
     transition: var(--transition_time);
     }
-
-
 
 
 
@@ -343,9 +354,14 @@ p{
   transition: color var(--transition_time);
 }
 
+@media (hover: hover){
+  .hoverable:hover{
+    color:red;}
+}
 
-.hoverable:hover{
-  color:red;
+@media (hover: none){
+  .hoverable:active{
+    color:red;}
 }
 
 button{

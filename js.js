@@ -105,7 +105,7 @@ window.addEventListener('scroll', function(){
         document.querySelector('body').click();
         console.log(document.querySelector('body'))
         event_scroll();
-        
+        document.querySelector('.content').click()
         return_scroll(CurrentScroll);
 
 } );
