@@ -52,6 +52,7 @@ body {
 
 
 .panel_mm{
+  pointer-events: all;
   overflow: hidden;
   display: flex;
   min-height: var(--main_menu_height_min);
@@ -178,6 +179,7 @@ body {
 /*Общие классы*/
 
 .hidden{
+  pointer-events: all;
   height: 0px;
   min-height: 0px;
 }
@@ -197,6 +199,7 @@ body {
 }
 
 .flexable_height{
+  pointer-events: all;
   transition: height var(--transition_time), min-height var(--transition_time);
 }
 
