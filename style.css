@@ -2,8 +2,8 @@
 
 
   --scrolbar_html: 0px;
-  --main_menu_height: 6vh;
-  --main_menu_height_min: 30px;
+  --main_menu_height: 7vh;
+  --main_menu_height_min: 35px;
   --main_menu_height_shrink: 1vh;
 
   --transition_time_s: 2.0s;
@@ -65,7 +65,10 @@ body {
   height: 100%;
   width: var(--main_menu_height);
   min-width: var(--main_menu_height_min);
-  background-color: lightblue;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -83,6 +86,75 @@ body {
 .bar{
   display: flex;
   gap:10px;
+}
+
+/*menu_button */
+
+.line{
+  position: absolute;
+  width: 60%;
+  height: 12%;
+  background: black;
+  transition: rotate var(--transition_time);
+}
+
+#line_1{
+  top:24.5%;
+}
+
+#line_2{
+  bottom:24.5%;
+}
+
+
+.menu_button_nested{
+    position: sticky;
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: center;
+    transition: var(--real_transition);/* ---------------------------------------------------------------ПЕРЕМЕННАЯ 1*/
+    width: 100%;
+
+}
+
+
+/*Ротация*/
+
+.deg45{
+  transform-origin: left top;
+  rotate: 45deg;
+}
+
+.deg_m_45{
+  transform-origin: left bottom;
+  rotate: -45deg;
+}
+
+
+.u_deg45{
+  transform-origin: left bottom;
+  rotate:0deg;
+}
+
+.u_deg_m_45{
+  transform-origin: left top;
+  rotate:0deg;
+}
+
+
+
+.active_button{
+  height: 100%;
+  transform: translateX(12%) scale(1) !important;
+}
+
+.unactive_button{
+  height: 60%;
+  transform: translateX(0);
+  
 }
 
 

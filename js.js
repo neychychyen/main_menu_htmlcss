@@ -161,7 +161,7 @@ function menu_onclick(event){
   
   
   
-  /*var nestedDiv = event.querySelector('div');
+  var nestedDiv = event.querySelector('div');
   var nestedDivClass = nestedDiv.querySelector('div'); // Получение класса вложенного div
 
   ClassList = nestedDivClass.classList
@@ -169,7 +169,7 @@ function menu_onclick(event){
 
   elements = document.querySelectorAll('.' + ClassList[0])
   
-  assemble_event_activity(elements[0], elements[1], nestedDiv) // Вывод класса вложенного div в консоль или выполнение других операций*/
+  assemble_event_activity(elements[0], elements[1], nestedDiv) // Вывод класса вложенного div в консоль или выполнение других операций
 
 }
 function assemble_event_activity(first_elem, second_elem, father){
@@ -177,7 +177,7 @@ function assemble_event_activity(first_elem, second_elem, father){
   if (first_elem.classList.contains('active')) {
 
     first_elem.classList.remove('active');
-    first_elem.classList.add('u_deg45');
+    first_elem.classList.add('u_deg_m_45');
     second_elem.classList.add('u_deg45');
     first_elem.classList.remove('deg45');
     
@@ -194,7 +194,7 @@ function assemble_event_activity(first_elem, second_elem, father){
     first_elem.classList.add('active');
     first_elem.classList.add('deg45');
     second_elem.classList.add('deg_m_45');
-    first_elem.classList.remove('u_deg45');
+    first_elem.classList.remove('u_deg_m_45');
     second_elem.classList.remove('u_deg45');
     
     father.classList.add('active_button')
