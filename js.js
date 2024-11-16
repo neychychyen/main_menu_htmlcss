@@ -69,6 +69,7 @@ function event_scroll(){// Что происходит при скроле, ну
     }
     if (NewScroll < 10){
       active_menu('.panel_mm.mainbar')
+      document.querySelector('.main_menu').classList.remove('main_menu_muted')
     }
     CurrentScroll = NewScroll
 
