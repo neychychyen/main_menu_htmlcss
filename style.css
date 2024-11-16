@@ -37,15 +37,16 @@ body {
   width:100%;
   position: fixed;
   background-color: blue;
-
+  pointer-events: all;
   transition: background-color var(--transition_time), filter var(--transition_time), opacity var(--transition_time);
 }
 
 .main_menu_muted{
+  pointer-events: all;
   background-color: black;
   opacity: 0.6;
   filter: blur(1px);
-  transition: padding-top var(--transition_time), filter var(--transition_time_s);
+  transition: padding-top var(--transition_time), background-color var(--transition_time), filter var(--transition_time), opacity var(--transition_time);
 }
 
 
