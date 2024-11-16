@@ -144,7 +144,7 @@ body {
 /*sidebar */
 
 .sidebar_menu{
-  overflow:scroll;
+  overflow-x: auto;
   width: 100%;
   background-color: lawngreen;
   display: flex;
