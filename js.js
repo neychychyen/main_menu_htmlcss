@@ -37,6 +37,12 @@ function get_transtion(){ // Выудить базовую задержку ан
 }
 
 
+function shut_menu(){
+  if (document.querySelector('.menu_button_nested').classList.contains('active_button')){
+        menu_onclick(document.querySelector('#mm'))
+      }
+}
+
 
 function event_scroll(){// Что происходит при скроле, нужен для window.addEventListener('scroll'
 

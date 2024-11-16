@@ -174,11 +174,14 @@ body {
   
     }
 
-
-.sidebar-item:hover .submenu {
+@media (hover:hover){
+  .sidebar-item:hover .submenu {
     max-height: 100vh;
     transition: var(--transition_time_s);
     }
+
+}
+
 
 
 
