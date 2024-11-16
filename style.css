@@ -40,6 +40,7 @@ body {
 }
 
 .main_menu{
+  user-select: none;
   display: flex;
   justify-content: center;
   padding-top: 1vh;
@@ -116,12 +117,7 @@ body {
 }
 
 /*menu_button */
-@media (hover:hover){
-.menu_button:hover .menu_button_nested{
-  transform: scale(1.1);
-  transition: transform var(--real_transition);
-}
-}
+
 
 .line{
   position: absolute;
@@ -158,6 +154,7 @@ body {
 /*sidebar */
 
 .sidebar_menu{
+  overflow-y: hidden;
   overflow-x: auto;
   width: 100%;
   background-color: lawngreen;
@@ -211,22 +208,17 @@ body {
 
 
 
-
-
-.fixed{
-  position: fixed;
+/*МЕню Бар правый */
+.right_bar{
+  justify-content: right;
 }
 
-.submenu_elem{
-  padding: 10px;
+.icon_menu {
+  width: 80%;
+  height: 80%;
+
 }
 
-
-.no-break {
-        display: block;
-        white-space: nowrap;
-        overflow: visible; /* Запрещает разрыв страницы внутри элемента */
-    }
 
 /*Ротация*/
 
@@ -269,6 +261,29 @@ body {
 
 /*Общие классы*/
 
+.absolute_pos{
+  position: absolute;
+}
+
+.sticky_pos{
+  position: sticky;
+}
+
+.fixed{
+  position: fixed;
+}
+
+.submenu_elem{
+  padding: 10px;
+}
+
+
+.no-break {
+        display: block;
+        white-space: nowrap;
+        overflow: visible; /* Запрещает разрыв страницы внутри элемента */
+    }
+
 .hidden{
   pointer-events: all;
   height: 0px;
@@ -309,6 +324,25 @@ button{
 
 
 /*hover*/
+
+.scalable{
+  transition: transform var(--real_transition);
+
+}
+
+
+@media(hover:hover){
+  .menu_button:hover .scalable{
+  transform: scale(1.1);
+  transition: transform var(--real_transition);
+
+}
+
+}
+
+
+
+
 
 .sidebar-item .div_button {
     transition: color var(--transition_time);
