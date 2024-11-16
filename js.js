@@ -164,10 +164,33 @@ window.addEventListener('resize', function(){
 
 
 // onclick фунции
+function del_activate_submenu(){
+
+  if (document.querySelector('.submenu.submenu_visible'))
+  document.querySelector('.submenu.submenu_visible').classList.remove('submenu_visible')
+
+}
+function activate_submenu(that){ // Активирует кнопку субменю, на которую нажали
+  res = that.querySelector('.fixed .submenu')
+  if (document.querySelector('.submenu.submenu_visible') == res){del_activate_submenu()}
+  else{
+    del_activate_submenu()
+  
+
+
+  res.classList.add('submenu_visible')
+  }
+  
+
+}
+
+
 
 function menu_onclick(event){
 
   unactive_menu()
+  del_activate_submenu()
+
 
   var sidebar = document.querySelector('.panel_mm.sidebar')
   if (sidebar.classList.contains('hidden')){active_menu('.panel_mm.sidebar')}
@@ -202,8 +225,6 @@ function assemble_event_activity(first_elem, second_elem, father){
     father.classList.remove('active_button')
     father.classList.add('unactive_button')
     
-    SideBar(true)
-    
       
       
 } else {  
@@ -217,29 +238,12 @@ function assemble_event_activity(first_elem, second_elem, father){
     father.classList.add('active_button')
     father.classList.remove('unactive_button')
 
-    SideBar()
 
 
 }
 
 }
 
-
-function SideBar(del=false){
-  sidebar = document.querySelector('.sidebar')
-  main_menu = document.querySelector('.main_menu')
-
-  if (del){
-    main_menu.classList.remove('heightx2');
-    sidebar.classList.add('hidden');
-  }
-
-  else {
-    main_menu.classList.add('heightx2');
-    sidebar.classList.remove('hidden');
-  }
-
-}
 
 
 
