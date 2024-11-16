@@ -353,7 +353,7 @@ p{
   align-items: center;
 }
 
-.hoverable{
+.hoverable_color{
   transition: color var(--transition_time);
 }
 

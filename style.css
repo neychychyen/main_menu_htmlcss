@@ -15,6 +15,14 @@
 
 
   --font-size: 4vh;
+  
+
+  --OrangeRed: #FF4500;
+  --Coral: #FF7F50;
+
+  --UnderlineColor: #FF4500ca;
+
+
 }
 
 
@@ -108,21 +116,27 @@ body {
 }
 
 /*menu_button */
+@media (hover:hover){
+.menu_button:hover .menu_button_nested{
+  transform: scale(1.1);
+  transition: transform var(--real_transition);
+}
+}
 
 .line{
   position: absolute;
   width: 60%;
-  height: 12%;
+  height: 15%;
   background: black;
   transition: rotate var(--transition_time);
 }
 
 #line_1{
-  top:24.5%;
+  top:23.5%;
 }
 
 #line_2{
-  bottom:24.5%;
+  bottom:23.5%;
 }
 
 
@@ -209,7 +223,8 @@ body {
 
 
 .no-break {
-        display: block ruby;
+        display: block;
+        white-space: nowrap;
         overflow: visible; /* Запрещает разрыв страницы внутри элемента */
     }
 
@@ -292,6 +307,68 @@ button{
 
 
 
+
+/*hover*/
+
+.sidebar-item .div_button {
+    transition: color var(--transition_time);
+}
+
+@media (hover:hover){
+  .sidebar-item:hover .div_button{
+    color:red;
+    transition: color var(--transition_time);
+  }
+}
+
+
+
+/*Цвета*/
+.hoverable_bs{
+  transition: box-shadow var(--transition_time);
+}
+
+.hoverable_color{
+  transition: color var(--transition_time);
+}
+
+
+.submenu_elem button{
+  transition: box-shadow var(--transition_time);
+}
+
+@media (hover: hover){
+  .hoverable_color:hover{
+  color:red;
+  }
+
+  .hoverable_bs:hover{
+  box-shadow: 0px 1px 1px var(--UnderlineColor);
+}
+
+.submenu_elem:hover button{
+  box-shadow: 0px 1px 1px var(--UnderlineColor);
+}
+
+}
+
+@media (hover: none){
+  .hoverable_color:active{
+    color:red;
+  }
+
+  .hoverable_bs:active{
+  box-shadow: 0px 1px 1px var(--UnderlineColor);
+}
+
+.submenu_elem:active button{
+  box-shadow: 0px 1px 1px var(--UnderlineColor);
+}
+}
+
+
+/*Шрифты*/
+
 html {
   font-size: clamp(20px, var(--font-size), var(--font-size)); /* 1rem = 16px  var(--font-size);*/
 }
@@ -300,3 +377,5 @@ html {
 .fs0_6{
   font-size: 0.6rem;
 }
+
+
