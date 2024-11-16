@@ -137,6 +137,66 @@ body {
 }
 
 
+
+/*sidebar */
+
+.sidebar_menu{
+  width: 100%;
+  background-color: lawngreen;
+  display: flex;
+  gap:5px;
+}
+
+
+.sidebar-item{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #4CAF50;
+  color: white;
+  padding-left: 2px;
+  padding-right: 2px;
+
+}
+
+
+
+
+.submenu {
+  
+  position: absolute;
+  background-color: green;
+  list-style: none;
+  max-height: 0;
+  overflow: hidden;
+  
+    }
+
+
+.sidebar-item:hover .submenu {
+    max-height: 100vh;
+    transition: var(--transition_time_s);
+    }
+
+
+
+
+.fixed{
+  position: fixed;
+}
+
+.submenu_elem{
+  padding: 10px;
+}
+
+
+.no-break {
+        display: block ruby;
+        overflow: visible; /* Запрещает разрыв страницы внутри элемента */
+    }
+
 /*Ротация*/
 
 .deg45{
@@ -206,4 +266,10 @@ body {
 
 .content{
   padding-top: calc(var(--main_menu_height_min) + var(--main_menu_height));
+}
+
+
+button{
+  all:unset;
+  cursor: default;
 }
