@@ -5,6 +5,7 @@ let CurrentScroll = getCurrentScroll()
 let CurrentTransition = get_transtion()
 
 
+
 // ПРЕДНАСТРОЙКИ функции
 return_scroll(getCurrentScroll())
 
@@ -40,25 +41,34 @@ function get_transtion(){ // Выудить базовую задержку ан
 function event_scroll(){// Что происходит при скроле, нужен для window.addEventListener('scroll'
 
 
+
+
     let NewScroll = getCurrentScroll()
 
-    const mainMenu = document.querySelector('.main_menu');
-    
-    // Если прокручено больше чем 100px (можно настроить значение)
+
     if (NewScroll - CurrentScroll > 0) {
-      mainMenu.classList.add('shrink');
+      
+      if (document.querySelector('.menu_button_nested').classList.contains('active_button')){
+        menu_onclick(document.querySelector('#mm'))
+      }
+      
+
+      document.querySelector('.main_menu').classList.add('main_menu_muted')
+      unactive_menu('.panel_mm.searchbar')
+      unactive_menu('.panel_mm.sidebar')
+      unactive_menu('.panel_mm.mainbar')
+
       
     } else {
-      mainMenu.classList.add('transition');
-      mainMenu.classList.remove('shrink');
-      setTimeout(() => {
-      mainMenu.classList.remove('transition');
-    }, get_transtion());
+      
+      active_menu('.panel_mm.mainbar')
+      document.querySelector('.main_menu').classList.remove('main_menu_muted')
+
+
       
     }
     if (NewScroll < 10){
-      mainMenu.classList.add('transition');
-      mainMenu.classList.remove('shrink');
+      active_menu('.panel_mm.mainbar')
     }
     CurrentScroll = NewScroll
 
