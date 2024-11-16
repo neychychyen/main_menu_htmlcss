@@ -12,6 +12,9 @@
 
 
   --menu_height:calc(15px + 3vh);
+
+
+  --font-size: 4vh;
 }
 
 
@@ -141,10 +144,11 @@ body {
 /*sidebar */
 
 .sidebar_menu{
+  overflow:scroll;
   width: 100%;
   background-color: lawngreen;
   display: flex;
-  gap:5px;
+  gap:10px;
 }
 
 
@@ -156,8 +160,8 @@ body {
   flex-direction: column;
   background-color: #4CAF50;
   color: white;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 2vw;
+  padding-right: 2vw;
 
 }
 
@@ -284,4 +288,15 @@ body {
 button{
   all:unset;
   cursor: default;
+}
+
+
+
+html {
+  font-size: clamp(20px, var(--font-size), var(--font-size)); /* 1rem = 16px  var(--font-size);*/
+}
+
+
+.fs0_6{
+  font-size: 0.6rem;
 }

@@ -136,7 +136,6 @@ function return_resize() {
 }
 
 function return_scroll(scrollPosition) {
-  console.log(scrollPosition)
   document.querySelector('#scroly').innerText = 'Текущий скролл: ' + scrollPosition;
       
 }
