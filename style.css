@@ -21,6 +21,8 @@
   --Coral: #FF7F50;
 
   --UnderlineColor: #FF4500ca;
+  --Deny: #Af0000;
+  --DenyHover:#FF0000;
 
 
 }
@@ -97,6 +99,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 
@@ -132,14 +135,14 @@ body {
 }
 
 #line_2{
-  bottom:23.5%;
+  bottom:23%;
 }
 
 
 .menu_button_nested{
     position: sticky;
     display: flex;
-    height: 60%;
+    height: 80%;
     flex-direction: column;
     justify-content: space-evenly;
     align-content: stretch;
@@ -149,6 +152,21 @@ body {
 
 }
 
+
+.line{
+  transition: var(--transition_time);
+}
+
+
+@media(hover:hover){
+  .menu_button:hover .line{
+    background:var(--DenyHover);
+  }
+}
+
+.active_button div{
+  background: var(--Deny);
+}
 
 
 /*sidebar */
@@ -251,7 +269,7 @@ body {
 }
 
 .unactive_button{
-  height: 60%;
+  height: 80%;
   transform: translateX(0);
   
 }
@@ -334,7 +352,7 @@ button{
 @media(hover:hover){
   .menu_button:hover .scalable{
   transform: scale(1.1);
-  transition: transform var(--real_transition);
+  transition: height var(--transition_time), transform var(--real_transition);
 
 }
 
