@@ -1,33 +1,3 @@
-:root {
-
-
-  --scrolbar_html: 0px;
-  --main_menu_height: 7vh;
-  --main_menu_height_min: 35px;
-  --main_menu_height_shrink: 1vh;
-
-  --transition_time_s: 2.0s;
-  --transition_time: .6s;
-  --real_transition: .3s;
-
-
-  --menu_height:calc(15px + 3vh);
-
-
-  --font-size: 4vh;
-  
-
-  --OrangeRed: #FF4500;
-  --Coral: #FF7F50;
-
-  --UnderlineColor: #FF4500ca;
-  --Deny: #Af0000;
-  --DenyHover:#FF0000;
-
-
-}
-
-
 body {
   max-width: 100%;
   overflow-x: hidden;
@@ -47,7 +17,6 @@ body {
   justify-content: center;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  overflow: hidden;
   width:100%;
   position: fixed;
   background-color: blue;
@@ -66,16 +35,16 @@ body {
 
 
 .panel_mm{
+  min-height: var(--main_menu_height_min);
   pointer-events: all;
-  overflow: hidden;
   display: flex;
   min-height: var(--main_menu_height_min);
   height: var(--main_menu_height);
+  overflow: hidden;
   width: 100%;
 }
 
 .sidebar {
-
   background-color: yellow;
 }
 
@@ -172,12 +141,10 @@ body {
 /*sidebar */
 
 .sidebar_menu{
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow: hidden;
   width: 100%;
   background-color: lawngreen;
   display: flex;
-  gap:10px;
 }
 
 
@@ -194,7 +161,11 @@ body {
 
 }
 
+.sidebar.hidden .main-menu-buttons,
+.sidebar.hidden .slider{
+  overflow: hidden;
 
+}
 
 
 .submenu {
@@ -419,15 +390,8 @@ button{
 }
 
 
-/*Шрифты*/
-
-html {
-  font-size: clamp(20px, var(--font-size), var(--font-size)); /* 1rem = 16px  var(--font-size);*/
-}
 
 
-.fs0_6{
-  font-size: 0.6rem;
-}
+
 
 
