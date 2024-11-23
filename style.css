@@ -9,14 +9,16 @@ body {
 
 .menu-content{
   width: 100%;
+  margin-top: 1vh;
+  padding-bottom: 1vh;
+  margin-bottom: 1vh;
+  background-color: var(--MainMenuNested);
 }
 
 .main_menu{
   user-select: none;
   display: flex;
   justify-content: center;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
   width:100%;
   position: fixed;
   background-color: blue;
@@ -46,23 +48,22 @@ body {
 
 .sidebar {
   height: var(--main_menu_height_2);
-  background-color: yellow;
   align-items: center;
 }
 
 
 .searchbar{
+  background: var(--MainMenuNested);
   display: flex;
   padding-left: 0.4%;
   padding-right: 0.4%;
   justify-content: center;
-  background-color: blueviolet;
 }
 
 .mainbar{
+  background: var(--MainMenuNested);
   padding-left: 0.4%;
   padding-right: 0.4%;
-  background-color: green;
 }
 
 .menu_button{
@@ -71,7 +72,6 @@ body {
   min-width: var(--main_menu_height_min);
   min-height: var(--main_menu_height_min);
   height: var(--main_menu_height);
-  background-color: yellow;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,13 +82,6 @@ body {
 
 /*mainbar*/
 
-.left_bar {
-  background-color: olive;
-}
-
-.right_bar {
-  background-color: gold;
-}
 
 .bar{
   display: flex;
@@ -150,7 +143,6 @@ body {
 .sidebar_menu{
   overflow: hidden;
   width: 100%;
-  background-color: lawngreen;
   display: flex;
 }
 
@@ -161,8 +153,6 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #4CAF50;
-  color: white;
   padding-left: 2vw;
   padding-right: 2vw;
 
@@ -179,7 +169,6 @@ body {
 .submenu {
   
   position: absolute;
-  background-color: green;
   list-style: none;
   max-height: 0;
   overflow: hidden;

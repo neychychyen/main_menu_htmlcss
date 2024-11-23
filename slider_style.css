@@ -5,7 +5,7 @@
 
 .main-menu-buttons{
   position: relative;
-  background: var(--OrangeRed);
+  background: var(--MainMenuNested);
   display:flex;
   width: 100vw;
 
@@ -25,7 +25,9 @@
 }
 
 
-
+.nested.unactive{
+  left:5px;
+}
 
 .main-menu-buttons:active{
   cursor:move;
@@ -65,11 +67,17 @@
 
 
 .button-text{
+
+  padding: 0 2px;
   position: relative;
   background-color: var(--Coral);
   
   height: 100%;
   width: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -82,7 +90,9 @@
   height: 50%;
   min-height: var(--main_menu_height_min);
   height: var(--main_menu_height);
-  width: var(--coub_height);
+  min-width: var(--coub_height);
+  width: fit-content;
+  white-space: nowrap;
 
   
 }
@@ -101,18 +111,10 @@
 }
 
 .reverse-displayedSubMenuButton{
-  position: relative;
   left: 100%;
   transform: translateX(-100%);
 }
 
-
-@media(hover:hover){
-  .reverse-displayedSubMenuButton{
-    min-width: 200%;
-    
-}
-}
 
 @media(hover:none){
   .reverse-displayedSubMenuButton{

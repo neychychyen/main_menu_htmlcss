@@ -185,6 +185,11 @@ function activate_submenu(that){ // Активирует кнопку субме
 
 
 function search_onclick(){
+
+  if (document.querySelector('.menu_button_nested').classList.contains('active_button')){
+        menu_onclick(document.querySelector('#mm'))
+      }
+
   var searchbar = document.querySelector('.panel_mm.searchbar')
   unactive_menu('.panel_mm.sidebar')
 

@@ -59,7 +59,7 @@
 
   --font-size: 4vh;
   
-
+  --MainMenuNested:#FFFFFF;
   --OrangeRed: #FF4500;
   --Coral: #FF7F50;
 
@@ -78,4 +78,16 @@ html {
 
 .fs0_6{
   font-size: 0.6rem;
+}
+
+/* Убираем все стили с ссылок */
+a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Убирает изменение цвета текста */
+    background: none; /* Убирает фон */
+    border: none; /* Убирает границу */
+    font: inherit; /* Наследует шрифт родительского элемента */
+    padding: 0; /* Убирает возможные отступы */
+    margin: 0; /* Убирает возможные внешние отступы */
+    outline: none; /* Убирает контур */
 }
