@@ -52,6 +52,10 @@ body {
 
 
 .searchbar{
+  display: flex;
+  padding-left: 0.4%;
+  padding-right: 0.4%;
+  justify-content: center;
   background-color: blueviolet;
 }
 
@@ -403,11 +407,12 @@ button{
 }
 
 .searchform input{
-  width:90vw;
+  width:100%;
   height: 80%;
 }
 
 .searchform p{
+  width:100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -450,5 +455,12 @@ button{
 
 
 
+p:has(.button.searchformButton){
+  width:auto;
+}
 
+.searchform input[type="text"],
+.searchform button {
+        width: 100%; /* Элементы займут всю ширину контейнера */
+}
 
