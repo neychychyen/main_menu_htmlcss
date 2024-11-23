@@ -8,7 +8,7 @@ body {
 }
 
 .menu-content{
-  width: 99%;
+  width: 100%;
 }
 
 .main_menu{
@@ -45,7 +45,9 @@ body {
 }
 
 .sidebar {
+  height: var(--main_menu_height_2);
   background-color: yellow;
+  align-items: center;
 }
 
 
@@ -54,7 +56,8 @@ body {
 }
 
 .mainbar{
-  
+  padding-left: 0.4%;
+  padding-right: 0.4%;
   background-color: green;
 }
 
@@ -164,6 +167,7 @@ body {
 .sidebar.hidden .main-menu-buttons,
 .sidebar.hidden .slider{
   overflow: hidden;
+  max-height: 0;
 
 }
 

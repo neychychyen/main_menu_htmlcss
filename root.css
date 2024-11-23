@@ -37,7 +37,9 @@
 
 
   --scrolbar_html: 0px;
+
   --main_menu_height: 7vh;
+  --main_menu_height_2: calc(var(--main_menu_height) + 2vh);
   --main_menu_height_min: 35px;
   --main_menu_height_shrink: 1vh;
 

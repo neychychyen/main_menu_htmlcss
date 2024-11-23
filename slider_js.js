@@ -491,7 +491,7 @@ class Slider{
 									const screenWidth = window.innerWidth;
 
 									// Определяем, попадает ли мышь в левую или правую крайность (менее 10% или более 90%)
-									if (mouseX < elementWidth * 0.03) {
+									if (mouseX < elementWidth * 0.015) {
 
 									    this.addToLeft(Math.floor(screenWidth * 0.1))
 

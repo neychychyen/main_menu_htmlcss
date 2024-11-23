@@ -184,16 +184,29 @@ function activate_submenu(that){ // Активирует кнопку субме
 }
 
 
+function search_onclick(){
+  var searchbar = document.querySelector('.panel_mm.searchbar')
+  unactive_menu('.panel_mm.sidebar')
+
+  if (searchbar.classList.contains('hidden')){active_menu('.panel_mm.searchbar')}
+  else {unactive_menu('.panel_mm.searchbar')}
+}
+
 
 function menu_onclick(event){
 
-  unactive_menu()
-  del_activate_submenu()
 
+  
+  unactive_menu('.panel_mm.searchbar')
 
   var sidebar = document.querySelector('.panel_mm.sidebar')
   if (sidebar.classList.contains('hidden')){active_menu('.panel_mm.sidebar')}
   else {unactive_menu('.panel_mm.sidebar')}
+
+  
+
+
+  
 
 
 
