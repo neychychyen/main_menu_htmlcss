@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  background-color: red;
+  background-color: var(--OrangeRed);
   height: 5000px;  
 }
 
@@ -21,14 +21,14 @@ body {
   justify-content: center;
   width:100%;
   position: fixed;
-  background-color: blue;
+  background-color: var(--ThemeColor);
   pointer-events: all;
   transition: background-color var(--transition_time), filter var(--transition_time), opacity var(--transition_time);
 }
 
 .main_menu_muted{
   pointer-events: all;
-  background-color: black;
+  background-color: var(--ThemeColor);
   opacity: 0.6;
   filter: blur(1px);
   transition: padding-top var(--transition_time), background-color var(--transition_time), filter var(--transition_time), opacity var(--transition_time);
@@ -277,18 +277,7 @@ body {
 }
 
 
-.h1w1{
-  height: 100%;
-  width: 100%;
-}
 
-.h1{
-  height: 100%;
-}
-
-.w1{
-  width: 100%;
-}
 
 .flexable_height{
   pointer-events: all;
@@ -298,12 +287,6 @@ body {
 
 .content{
   padding-top: calc(var(--main_menu_height_min) + var(--main_menu_height));
-}
-
-
-button{
-  all:unset;
-  cursor: default;
 }
 
 
@@ -321,70 +304,19 @@ button{
   .menu_button:hover .scalable{
   transform: scale(1.1);
   transition: height var(--transition_time), transform var(--real_transition);
-
-}
-
-}
-
-
-
-
-
-.sidebar-item .div_button {
-    transition: color var(--transition_time);
-}
-
-@media (hover:hover){
-  .sidebar-item:hover .div_button{
-    color:red;
-    transition: color var(--transition_time);
   }
+
 }
+
+
+
+
+
 
 
 
 /*Цвета*/
-.hoverable_bs{
-  transition: box-shadow var(--transition_time);
-}
 
-.hoverable_color{
-  transition: color var(--transition_time);
-}
-
-
-.submenu_elem button{
-  transition: box-shadow var(--transition_time);
-}
-
-@media (hover: hover){
-  .hoverable_color:hover{
-  color:red;
-  }
-
-  .hoverable_bs:hover{
-  box-shadow: 0px 1px 1px var(--UnderlineColor);
-}
-
-.submenu_elem:hover button{
-  box-shadow: 0px 1px 1px var(--UnderlineColor);
-}
-
-}
-
-@media (hover: none){
-  .hoverable_color:active{
-    color:red;
-  }
-
-  .hoverable_bs:active{
-  box-shadow: 0px 1px 1px var(--UnderlineColor);
-}
-
-.submenu_elem:active button{
-  box-shadow: 0px 1px 1px var(--UnderlineColor);
-}
-}
 
 .searchform{
   display: flex;
@@ -412,35 +344,6 @@ button{
   height: calc(80% - 2px);
 }
 
-/* Стиль кнопки */
-.button {
-
-    padding-left: 2px;
-    padding-right: 2px;
-    color: #333; /* Темный цвет текста */
-    background-color: white; /* Белый фон */
-    border: 1px solid #333; /* Светло-серая рамка */
-    border-radius: 2px; /* Скругленные углы */
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
-    transition: all 0.1s ease; /* Плавные переходы для эффектов */
-}
-
-/* Эффект при наведении */
-.button:hover {
-    background-color: #f1f1f1; /* Легкое затемнение фона при наведении */
-    border-color: #555;  /* Цвет рамки немного темнее */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Тень становится более заметной */
-    transform: scale(1.05); /* Легкое увеличение кнопки */
-}
-
-/* Эффект при нажатии */
-.button:active {
-    background-color: #e0e0e0; /* Еще более темный фон при нажатии */
-    border: 3px solid #444; /* Цвет рамки становится темнее */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Меньшая тень при нажатии */
-    transform: scale(0.98); /* Кнопка слегка уменьшается при нажатии */
-}
 
 
 
@@ -453,3 +356,13 @@ p:has(.button.searchformButton){
         width: 100%; /* Элементы займут всю ширину контейнера */
 }
 
+
+
+.content{
+  background-color: var(--MainMenuNested);
+}
+
+
+.main_menu.main_menu_muted .menu-content{
+  padding-bottom: 0vh;
+}

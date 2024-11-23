@@ -569,6 +569,8 @@ class Slider{
 									}
 								this.eventManager.removeEvent(this.eventManagerDict[objectup])
 								delete this.eventManagerDict[objectup]
+
+
 							}
 
 							name = this.eventManager.addEvent(document, objectup, mouseUp_preset)
@@ -583,10 +585,11 @@ class Slider{
 							
 							//console.log('Создаем this.intervalMainId')
 
-							deleteUnactive()
+							
 
 							//Для интервала при нажатии мыши
 							let interval_preset = () => {
+								deleteUnactive()
 								//console.log(this.intervalMainId)
 								let press_button = () => {
 									let {x, y} = this.MouseTracker.getPos()

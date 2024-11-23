@@ -81,6 +81,10 @@
 
 }
 
+.button-text.button{
+  cursor:unset;
+}
+
 
 
 .menu-button{
@@ -106,9 +110,16 @@
   width: fit-content;
   max-height: 0vh;
   overflow: hidden;
-  background-color: yellowgreen;
+  background-color: var(--MainMenuNested);
 
 }
+
+.nested.unactive .menu-button:hover .displayedSubMenuButton{
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+
 
 .reverse-displayedSubMenuButton{
   left: 100%;
@@ -124,10 +135,22 @@
 
 .submenuButton{
   padding: 5px;
+  font-weight: bold;
+  transition: background-color var(--transition_time), box-shadow var(--transition_time), transform var(--real_transition);
 }
 
 .submenuButton:hover{
-  background-color: red;
+  
+  background-color:var(--ButtonPress)
 }
 
+.submenuButton:active {
+  transform: scale(0.4); 
+  box-shadow: 2px 4px 5px var(--CoralBoxShadow);
+}
+
+.submenuButton a{
+  width: 100%;
+  height: 100%;
+}
 
