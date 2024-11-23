@@ -393,7 +393,60 @@ button{
 }
 }
 
+.searchform{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 
+.searchform input{
+  width:90vw;
+  height: 80%;
+}
+
+.searchform p{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.searchformButton{
+  height: calc(80% - 2px);
+}
+
+/* Стиль кнопки */
+.button {
+
+    padding-left: 2px;
+    padding-right: 2px;
+    color: #333; /* Темный цвет текста */
+    background-color: white; /* Белый фон */
+    border: 1px solid #333; /* Светло-серая рамка */
+    border-radius: 2px; /* Скругленные углы */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: all 0.1s ease; /* Плавные переходы для эффектов */
+}
+
+/* Эффект при наведении */
+.button:hover {
+    background-color: #f1f1f1; /* Легкое затемнение фона при наведении */
+    border-color: #555;  /* Цвет рамки немного темнее */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Тень становится более заметной */
+    transform: scale(1.05); /* Легкое увеличение кнопки */
+}
+
+/* Эффект при нажатии */
+.button:active {
+    background-color: #e0e0e0; /* Еще более темный фон при нажатии */
+    border: 3px solid #444; /* Цвет рамки становится темнее */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Меньшая тень при нажатии */
+    transform: scale(0.98); /* Кнопка слегка уменьшается при нажатии */
+}
 
 
 
