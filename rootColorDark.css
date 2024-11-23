@@ -1,0 +1,19 @@
+  :root{
+  --MainMenuNested:#371f25;
+  --ButtonHover:#4f343a;
+  --ButtonPress:#743044;
+  --MenuButtonMainBar:#6e4851;
+
+  --ThemeColor:#5e3e45;
+  --ThemeColorMuted:#4f343a;
+  --HTMLColor:#743044;
+
+  --borderMM:#e4bdc4;
+  --borderMMHover:#9f8489;
+  --borderMMActive:#725e62;
+
+  --fontColor:#e4bdc4;
+
+  --Deny: #e4bdc4;
+  --DenyHover:#FF0000;
+  }

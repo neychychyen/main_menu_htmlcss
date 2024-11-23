@@ -3,14 +3,14 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  background-color: var(--OrangeRed);
+  background-color: var(--HTMLColor);
   height: 5000px;  
 }
 
 .menu-content{
   width: 100%;
   margin-top: 1vh;
-  padding-bottom: 1vh;
+  padding-bottom: 2vh;
   margin-bottom: 1vh;
   background-color: var(--MainMenuNested);
 }
@@ -47,8 +47,13 @@ body {
 }
 
 .sidebar {
+  padding-top: 1vh;
   height: var(--main_menu_height_2);
   align-items: center;
+}
+
+.sidebar.hidden{
+  padding-top: 0vh;
 }
 
 
@@ -76,6 +81,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: var(--MenuButtonMainBar);
 }
 
 
@@ -95,7 +101,7 @@ body {
   position: absolute;
   width: 60%;
   height: 15%;
-  background: black;
+  background: var(--fontColor);
   transition: rotate var(--transition_time);
 }
 
