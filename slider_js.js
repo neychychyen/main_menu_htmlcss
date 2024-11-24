@@ -112,7 +112,7 @@ class MouseTracker{
 
 		console_log(){
     	let intervalMainId = setInterval(() => {
-            console.log(`MouseTracker class this.mouseX ${this.mouseX}, this.mouseY ${this.mouseY}`)
+            //console.log(`MouseTracker class this.mouseX ${this.mouseX}, this.mouseY ${this.mouseY}`)
         }, 100)
     }
 }
@@ -338,7 +338,7 @@ class Slider{
 				}
 			}
 			 else {
-			    console.log('Unknown parameter:', param);  // Обрабатываем случай, если параметр не найден
+			    //console.log('Unknown parameter:', param);  // Обрабатываем случай, если параметр не найден
 			}
 		}
 
@@ -392,7 +392,7 @@ class Slider{
 							//console.log('this.intervalMainId')
 							let {x, y} = this.TouchTracker.getPos()
 
-							console.log(this.curPos, x)
+							//console.log(this.curPos, x)
                             if (this.curPos == null){
                             	//console.log(`curPos будет равен ${x}`)
                             	this.curPos = x
@@ -503,7 +503,7 @@ class Slider{
 						
 					}
 						
-						console.log('Вошли в область')
+						//console.log('Вошли в область')
 						//console.log(this.Intervals)
 
 						this.MouseTracker.startEvents()
@@ -547,7 +547,7 @@ class Slider{
 						let press_preset = (event) => {
 
 							let mouseUp_preset = (event) => {
-								console.log('mouseUp_presett')
+								//console.log('mouseUp_presett')
 								pushUnactive()
 								if (this.Intervals['hoverableScroll'] !== undefined){
 									this.intervalManager.clearSingleInterval(this.Intervals['hoverableScroll'])
@@ -574,7 +574,7 @@ class Slider{
 							}
 
 							name = this.eventManager.addEvent(document, objectup, mouseUp_preset)
-							console.log(`this.eventManager.addEvent(document, objectup, mouseUp_preset) = ${name}`)
+							//console.log(`this.eventManager.addEvent(document, objectup, mouseUp_preset) = ${name}`)
 							this.eventManagerDict[objectup] = name
 
 
@@ -637,7 +637,7 @@ class Slider{
 				}
 
 				let leave_preset = () => {
-					console.log('Leave_preset')
+					//console.log('Leave_preset')
 					if (this.Intervals['widthScroll'] !== undefined){
 								this.intervalManager.clearSingleInterval(this.Intervals['widthScroll'])
 								this.Intervals['widthScroll'] = undefined
