@@ -10,7 +10,7 @@ body {
 .menu-content{
   width: 100%;
   margin-top: 1vh;
-  padding-bottom: 2vh;
+
   margin-bottom: 1vh;
   background-color: var(--MainMenuNested);
 }
@@ -47,13 +47,13 @@ body {
 }
 
 .sidebar {
-  padding-top: 1vh;
+  margin-top: 1vh;
   height: var(--main_menu_height_2);
   align-items: center;
 }
 
 .sidebar.hidden{
-  padding-top: 0vh;
+  margin-top: 0vh;
 }
 
 
@@ -72,7 +72,7 @@ body {
 }
 
 .menu_button{
-
+  border-radius: 1px;
   width: var(--main_menu_height);
   min-width: var(--main_menu_height_min);
   min-height: var(--main_menu_height_min);
