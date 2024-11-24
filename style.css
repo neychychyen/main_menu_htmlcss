@@ -28,7 +28,7 @@ body {
 
 .main_menu_muted{
   pointer-events: all;
-  background-color: var(--ThemeColor);
+  background-color: var(--ThemeColorMuted);
   opacity: 0.6;
   filter: blur(1px);
   transition: padding-top var(--transition_time), background-color var(--transition_time), filter var(--transition_time), opacity var(--transition_time);
@@ -82,9 +82,16 @@ body {
   justify-content: center;
   overflow: hidden;
   background-color: var(--MenuButtonMainBar);
+  transition: background-color var(--transition_time);
 }
 
+.menu_button:hover{
+  background-color: var(--ButtonHover);
+}
 
+.menu_button:active{
+  background-color: var(--ButtonPress);
+}
 
 /*mainbar*/
 

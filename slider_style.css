@@ -110,7 +110,7 @@
   width: fit-content;
   max-height: 0vh;
   overflow: hidden;
-  background-color: var(--MainMenuNested);
+  background-color: var(--ButtonHover);
 
 }
 
