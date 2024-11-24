@@ -262,6 +262,12 @@ function assemble_event_activity(first_elem, second_elem, father){
 }
 
 
+function loadCSS(url) {
+    var link = document.createElement('link'); // Создаем элемент <link>
+    link.rel = 'stylesheet'; // Устанавливаем атрибут rel
+    link.href = url; // Устанавливаем путь к CSS файлу
+    document.head.appendChild(link); // Добавляем элемент в <head>
+}
 
 
 
